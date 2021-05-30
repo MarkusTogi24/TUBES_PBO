@@ -1,0 +1,125 @@
+{% extends 'sidebar_topbar_user.html' %}
+
+{% block page_content %}
+
+    <!-- HALAMAN MULAI -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-700 p-1">
+            {% block page_title %}
+
+            {% endblock page_title %}
+            </h1>
+        </div>
+
+        <!-- KARTU-KARTU MULAI -->
+        <div class="row">
+
+            <!-- CARD 'GEDUNG' -->
+            <div class="col-xl-4 col-md-6 mb-4">
+                <div class="card border-left-info shadow h-100 py-2">
+                    <div class="card-header py-1 d-flex flex-row align-items-center justify-content-between">
+                        <div class="text-s font-weight-bold text-info text-uppercase mb-0">
+                            Gedung</div>
+                        <div class="dropdown no-arrow">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownGedungCard"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-info-circle fa-sm fa-fw text-gray-400"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                aria-labelledby="dropdownGedungCard">
+                                <a class="dropdown-item" href="/infogedung">Tampilkan data</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="h4 mb-0 font-weight-bold text-gray-800">
+                                    {{DataGedung.count}}
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-university fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 'RUANGAN' -->
+            <div class="col-xl-4 col-md-6 mb-4">
+                <div class="card border-left-info shadow h-100 py-2">
+                    <div class="card-header py-1 d-flex flex-row align-items-center justify-content-between">
+                        <div class="text-s font-weight-bold text-info text-uppercase mb-0">
+                            Ruangan</div>
+                        <div class="dropdown no-arrow">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownRuangCard"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-info-circle fa-sm fa-fw text-gray-400"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                aria-labelledby="dropdownRuangCard">
+                                <a class="dropdown-item" href="/inforuang">Tampilkan data</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="h4 mb-0 font-weight-bold text-gray-800">
+                                    {{DataRuang.count}}
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-building fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 'BARANG' -->
+            <div class="col-xl-4 col-md-6 mb-4">
+                <div class="card border-left-info shadow h-100 py-2">
+                    <div class="card-header py-1 d-flex flex-row align-items-center justify-content-between">
+                        <div class="text-s font-weight-bold text-info text-uppercase mb-0">
+                            Barang</div>
+                        <div class="dropdown no-arrow">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownRuangCard"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-info-circle fa-sm fa-fw text-gray-400"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                aria-labelledby="dropdownRuangCard">
+                                <a class="dropdown-item" href="/infobarang">Tampilkan data</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="h4 mb-0 font-weight-bold text-gray-800">
+                                    {{JumlahBarang}}
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-archive fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- KARTU-KARTU SELESAI -->
+
+        {% block 1 %}
+
+        {% endblock 1 %}
+
+    </div>
+    <!-- HALAMAN SELESAI -->
+{% endblock page_content %}

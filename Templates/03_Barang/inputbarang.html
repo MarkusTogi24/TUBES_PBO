@@ -1,0 +1,39 @@
+{% extends 'sidebar_topbar.html' %}
+{% block page_content %}
+
+    <div class="row justify-content-center">
+        <div class="col-xl-4">
+            <div class="card card border-left-info o-hidden shadow-lg my-3">
+                
+                <div class="card-header p-2 d-flex flex-row align-items-center justify-content-between">
+                    <div class="text-lg font-weight-bold text-info text-uppercase mb-0">
+                        {{Judul_Kartu}}
+                    </div>
+                </div>
+
+                <div class="card-body p-1 align-items-center justify-content-between">
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col-lg-10">
+                            <div class="p-5">
+                                <form method = "POST">
+                                    {% csrf_token %}
+                                    {% for Form in form  %}
+                                        <div class="form-group">
+                                            {{Form}}
+                                        </div>
+                                    {% endfor %}
+                                    <button class="btn btn-info btn-user btn-block" type="submit">
+                                        Simpan
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

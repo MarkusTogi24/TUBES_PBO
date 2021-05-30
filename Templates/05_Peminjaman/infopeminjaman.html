@@ -1,0 +1,121 @@
+{% extends 'user_dashboard.html' %}
+
+{% block page_title %}
+    {{Judul}}
+{% endblock page_title %}
+
+
+{% block 1 %}
+    <div class="card border-left-info shadow py-2" >
+        <div class="card-header py-2 d-flex flex-row align-items-center justify-content-between">
+            <div class="text-l font-weight-bold text-info text-uppercase mb-0">Peminjaman Berhasil</div>
+        </div>
+        <div class="card-body">
+
+            <div class="row p-1">
+                <div class="col-4">
+                    <div class="h5 mb-0 font-weight-bold text-gray-600">
+                        Nomor peminjaman
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="h5 mb-0 font-weight-bold text-gray-600">
+                        :
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="h5 mb-0 font-weight-bold text-gray-600">
+                        {{nomor}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row p-1">
+                <div class="col-4">
+                    <div class="h5 mb-0 font-weight-bold text-gray-600">
+                        Nama peminjam
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="h5 mb-0 font-weight-bold text-gray-600">
+                        :
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="h5 mb-0 font-weight-bold text-gray-600">
+                        {{nama}}
+                    </div>
+                </div>
+            </div>
+            <div class="row p-1">
+                <div class="col-4">
+                    <div class="h5 mb-0 font-weight-bold text-gray-600">
+                        Barang
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="h5 mb-0 font-weight-bold text-gray-600">
+                        :
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="h5 mb-0 font-weight-bold text-gray-600">
+                        {{barang}}
+                    </div>
+                </div>
+            </div>
+            <div class="row p-1">
+                <div class="col-4">
+                    <div class="h5 mb-0 font-weight-bold text-gray-600">
+                        Jumlah dipinjam
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="h5 mb-0 font-weight-bold text-gray-600">
+                        :
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="h5 mb-0 font-weight-bold text-gray-600">
+                        {{jumlahpinjam}}
+                    </div>
+                </div>
+            </div>
+            <div class="row p-1">
+                <div class="col-4">
+                    <div class="h5 mb-0 font-weight-bold text-gray-600">
+                        Tanggal pinjam
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="h5 mb-0 font-weight-bold text-gray-600">
+                        :
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="h5 mb-0 font-weight-bold text-gray-600">
+                        {{tpinjam}}
+                    </div>
+                </div>
+            </div>
+            <div class="row p-1">
+                <div class="col-4">
+                    <div class="h5 mb-0 font-weight-bold text-gray-600">
+                        Tanggal kembali
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="h5 mb-0 font-weight-bold text-gray-600">
+                        :
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="h5 mb-0 font-weight-bold text-gray-600">
+                        {{tkembali}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}
